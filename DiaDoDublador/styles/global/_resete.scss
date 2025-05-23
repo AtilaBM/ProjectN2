@@ -1,18 +1,25 @@
-@mixin reset {
-    margin: 15%;
-    padding: 0;
+@use './variables';
+
+@mixin margin {
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 /* 2. Remove default margin */
 * {
   margin: 0;
+  // padding: 0;
 }
-
+section{
+  @include margin();
+}
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -28,18 +35,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
-  font: inherit;
+input,
+button,
+textarea,
+select {
+  font: 'Inter', sans-serif;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -47,13 +67,19 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
