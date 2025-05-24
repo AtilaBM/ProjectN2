@@ -9,10 +9,32 @@
   font-weight: 400;
 
 }
+@mixin interBold500(){
+  font-family: 'Inter',sans-serif;
+  font-weight: 500;
+}
+@mixin interBold600(){
+  font-family: 'Inter',sans-serif;
+  font-weight: 600;
+}
 @mixin interBold700(){
   font-family: 'Inter',sans-serif;
   font-weight: 700;
 }
+
+h1{
+  @include interBold700();
+}
+h2{
+  @include interBold600();
+}
+h3{
+  @include interBold500();
+}
+p{
+  @include interRegular400();
+}
+
 
 //Colors
 
@@ -23,7 +45,7 @@ $color-light:     #F0F2F1; // Fundo claro / texto claro (Cultured)
 $color-accent:    #BF967E; // Cor de ação / chamada (Rosy Brown)
 
 
-
+//Flex Box
 
 @mixin flex-center($direction) {
   display: flex;
