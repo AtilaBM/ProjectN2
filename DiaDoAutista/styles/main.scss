@@ -8,9 +8,13 @@
 @use './components/card/card';
 
 // Layout
-
-
+@use './layout/header';
+@use './layout/footer';
 
 // Pages
 
 @use './pages/inicio';
+@use './pages/caracteristicas';
+@use './pages/celebridades';
+@use './pages/eventos';
+@use './pages/sobre';

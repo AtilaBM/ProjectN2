@@ -1,0 +1,12 @@
+@use '../global/variables' as *;
+
+footer{
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-light;
+    text-align: center;
+    padding: 10px 0;
+    @include interBold600
+}

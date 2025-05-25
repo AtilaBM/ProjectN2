@@ -1,3 +1,67 @@
-@use '../global/variables' as *;
+@use "../global/variables" as *;
+
+.mainSection {
+  background-color: $color-tertiary;
+  color: $color-light;
+  display: flex;
+  justify-content: space-between;
+  max-width: 70%;
+  padding: 2rem;
+  border-radius: 20px;
+  div {
+    display: flex;
+    flex-direction: column;
+    word-wrap: wrap;
+    h1 {
+      @include interBold700;
+      font-size: 4rem;
+    }
+  }
+  img {
+    width: 40%;
+    background-color: $color-light;
+    border-radius: 50%;
+  }
+}
+
+.subSection {
+  margin-top: 20px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 6px 6px 15px 1px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 6px 6px 15px 1px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 6px 6px 15px 1px rgba(0, 0, 0, 0.49);
+display: flex;
+flex-direction: column;
+
+h2,h3{
+    padding: 16px 0;
+}
+
+h2{
+    text-align: center;
+    @include interBold700;
+    font-size: 30px;
+}
 
 
+h3{
+    @include interBold600;
+}
+h3::after{
+  content: "";
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 4px;
+    background: $color-tertiary; // Cor de destaque (pode ser $color-accent)
+    margin: 0;
+    border-radius: 2px;
+}
+
+p{
+    @include interRegular400;
+    text-align: justify;
+    text-indent: 1.25cm;
+}
+}

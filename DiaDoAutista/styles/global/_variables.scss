@@ -52,3 +52,19 @@ $color-accent:    #BF967E; // Cor de ação / chamada (Rosy Brown)
   justify-content: center;
   flex-direction: $direction;
 }
+
+//Tags
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+}
+
+main{
+  padding: 5rem 0;
+}

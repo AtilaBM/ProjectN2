@@ -1,0 +1,69 @@
+@use "../global/variables" as *;
+
+header {
+  background-color: $color-secondary;
+
+  //   border: 1px solid black;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  ul {
+    // border: 1px solid rgb(252, 0, 0);
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      //   border: 1px solid black;
+      text-align: center;
+      a {
+        @include interBold600;
+        color: $color-light;
+        padding: 1px 8px;
+        width: 100%;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: color;
+      }
+
+      a:focus,
+      a:hover {
+        color: $color-light;
+      }
+
+      a:focus:after,
+      a:hover:after {
+        width: 100%;
+        left: 0%;
+      }
+
+      a:after {
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: $color-light;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left;
+      }
+    }
+  }
+}
